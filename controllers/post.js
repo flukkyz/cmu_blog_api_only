@@ -93,7 +93,7 @@ module.exports = {
       const newData = await db.sequelize.transaction((t) => {
         if (req.file) {
           data.Img = {
-            url: req.file.path.replace('static', ''),
+            url:  `${process.env.API_URL}${req.file.path.replace('static', '')}`,
             path: req.file.path
           }
         }
@@ -139,7 +139,7 @@ module.exports = {
           if (req.file) {
             oldImg = await oldData.getImg()
             const newImg = await Img.create({
-              url: req.file.path.replace('static', ''),
+              url:  `${process.env.API_URL}${req.file.path.replace('static', '')}`,
               path: req.file.path
             }, {
               transaction: t
