@@ -89,5 +89,5 @@ sw.*
 # Vim swap files
 *.swp
 
-public/uploads/posts/* 
-!public/uploads/posts/.gitkeep 
+static/uploads/posts/* 
+!static/uploads/posts/.gitkeep 
