@@ -22,7 +22,7 @@ app.use(express.urlencoded({
 app.use('/oauth2',oAuth2)
 app.use('/api',routes)
 
-app.use(express.static('public'))
+app.use(express.static('static'))
 
 app.use(notFound)
 app.use(handleError)
