@@ -4,7 +4,7 @@ const path = require('path')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, `./public/uploads/${file.fieldname.replace('_img','s').replace('_logo','s')}`)
+    cb(null, `./static/uploads/${file.fieldname.replace('_img','s').replace('_logo','s')}`)
   },
   filename: (req, file, cb) => {
     const mimetypes = {
