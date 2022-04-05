@@ -9,4 +9,4 @@ services:
                 env_file:
                         - .env
                 volumes:
-                        - "/home/cnoc/docker_sync_resource/${APP_NAME}/posts:/app/public/uploads/posts"
+                        - "/home/cnoc/docker_sync_resource/${APP_NAME}/posts:/app/static/uploads/posts"
